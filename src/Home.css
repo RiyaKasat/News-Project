@@ -1,0 +1,28 @@
+/* .card1
+{
+    background-image: url('images/holder.jpg');
+    background-size: cover;
+} */
+
+
+/* card-deck img
+
+{
+    background-image: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.dailynews.com%2Fwp-content%2Fuploads%2F2017%2F09%2Fimg_3776.jpg&imgrefurl=https%3A%2F%2Fwww.dailynews.com%2Ftraffic%2F&tbnid=Iy08zFlEE6JUBM&vet=12ahUKEwiaw-LWzoHuAhXIFHIKHXODCuQQMygiegUIARCjAg..i&docid=0iJv8TBA7xxjjM&w=600&h=400&q=news%20images&ved=2ahUKEwiaw-LWzoHuAhXIFHIKHXODCuQQMygiegUIARCjAg');
+    background-size: cover;
+   
+}
+
+card-body
+{
+    border: white;
+} */
+
+.form
+{
+    margin-top: 10px;
+}
+
+.app {
+    text-align: center;
+  }
