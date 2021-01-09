@@ -5,7 +5,7 @@ import './Display.css';
 import Outlet from './Outlet.js';
 import './Outlet.css';
 import './Search.css';
-const apiKey = '517e1eb7074b4b0f9543864552059bea';
+const apiKey = '8a52c5367bb942d59170096fa552a8da';
 class Search extends Component {
 
   constructor(props) {
@@ -44,9 +44,9 @@ class Search extends Component {
     return (
       <div >
        
-
-        <h4 className="ABC">Select from {this.state.count} News Outlets</h4>
-        <select class="selectpicker" className="ABC" data-style="btn-success" value={this.state.value} onChange={this.handleChange}>
+<div className="  ABC mx-auto">
+        <h4>{this.state.count} News Outlets    </h4>
+        <select class="selectpicker "  data-style="btn-success" value={this.state.value} onChange={this.handleChange}>
           
           {this.state.data.map((outlet, i) => 
           {
@@ -57,6 +57,7 @@ class Search extends Component {
             );
           })}
         </select>
+        </div>
         <Outlet default={this.state.value} />
         <Display default={this.state.value} />
 

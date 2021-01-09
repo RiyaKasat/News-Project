@@ -58,10 +58,10 @@ export class SignUpLogin extends Component {
            
                  <div class="d-flex justify-content-center">
       <div class="text-center">
-       <button type="button" className="btn btn-info float-right" data-toggle="modal"data-target="#signup" >SignUp<i class="fas fa-user-plus ml-3"></i></button> 
+       <button type="button" className="btn btn-sm btn-warning float-right " data-toggle="modal"data-target="#signup" >SignUp<i class="fas fa-user-plus ml-3"></i></button> 
        </div>
        <div class="text-center">
-       <button type="button" className="btn btn-info float-right" data-toggle="modal" data-target="#login">Login<i class="fas fa-sign-in-alt ml-3"></i></button> 
+       <button type="button" className="btn btn-sm btn-warning float-right" data-toggle="modal" data-target="#login">Login<i class="fas fa-sign-in-alt ml-3"></i></button> 
        </div>
 
         {/* Sign up */}

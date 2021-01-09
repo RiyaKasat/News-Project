@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,28 +22,27 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 
-.App-link {
-  color: #61dafb;
-}
+
 .carousel-caption {
   position: relative;
   left: auto;
   right: auto;
 }
-/*.jumbotron{
-background-image:url('images/background_image_3.jpg');
-background-size: cover; 
-} */
+.jumbotron{
+
+background-size: contain; 
+height: 40px;
+}
 
 .marq
 {
  height: 30px;
-color: black;
-box-sizing: border-box;
-border: 1px solid red;
+
+margin-left: 50px;
+
 }
 
 
@@ -109,6 +108,7 @@ border: 1px solid red;
 
   width:100%;
   background-size: cover;
+
   
 } 
 .imgbox6
@@ -145,10 +145,44 @@ html {
 {
    margin-left: 20px;
 }
+.ABC2{
+  height: 130px;
+  margin-top:0px;
+  width: 100%;
+  background-color:#d14a06;
+}
 
 .ABC1{
-  height: 50px;
-  margin-bottom: 50px;
+  
   width: 100%;
-  background-color: #e8acc6;
+  background-color: #201109;
+  height: 100px;
+ 
+}
+
+.SL{
+  margin-left: 70%;
+}
+
+
+
+
+.A_NAV{
+  background-color: #0d6e7a;
+  width: 96%;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+.items_A{
+  color:#4d160a;
+
+}
+
+.items_B{
+  color:#d69b12;
+
+}
+.LOGO{
+  justify-content: center;
 }

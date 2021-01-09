@@ -28,7 +28,7 @@ class Outlet extends Component {
 
   getSources() {
     // Make HTTP reques with Axios
-    const apiKey = '517e1eb7074b4b0f9543864552059bea';
+    const apiKey = '8a52c5367bb942d59170096fa552a8da';
     axios.get(`https://newsapi.org/v2/sources?language=en&apiKey=${apiKey}`).then(res => {
       // Set state with result
       this.setState({ data: res.data.sources });
@@ -39,21 +39,17 @@ class Outlet extends Component {
     return (
      
                 
-      <div className="outletSection ABC" class="jumbotron-fluid">
+      <div className="outletSection mx-auto" >
         
 
         {this.state.data.map((item, y) => {
           if (item.id === this.state.value) {
             return (
-              <div key={y} className="singleNew ABC">
-                <div className="generalInfo ABC">
-                  <h4>
-                    <a href={item.url} target="_blank" rel="noopener noreferrer">
-                      {item.name}
-                    </a>
-                  </h4>
-                  <img className="flagCode ABC" src={findFlag(item.country)} alt="flag" />
-                  <p>{item.country.toUpperCase()}</p>
+              <div key={y} className="singleNew ">
+                <div className="generalInfo">
+                  
+                  <img className="flagCode " src={findFlag(item.country)} alt="flag" />
+                  <p><h1>{item.country.toUpperCase()}</h1></p>
                   
                 </div>
                

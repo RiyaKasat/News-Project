@@ -28,7 +28,7 @@ class OutletSports extends Component {
 
   getSources() {
     // Make HTTP reques with Axios
-    const apiKey = '517e1eb7074b4b0f9543864552059bea';
+    const apiKey = '64fdfad349014eebafb3956d3f31c743';
     axios.get(`https://newsapi.org/v2/sources?apiKey=${apiKey}`).then(res => {
       // Set state with result
       this.setState({ data: res.data.sources });

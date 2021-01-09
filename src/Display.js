@@ -37,7 +37,7 @@ class Display extends Component {
   }
 
   getArticles(url) {
-    const apiKey = '517e1eb7074b4b0f9543864552059bea';
+    const apiKey = '8a52c5367bb942d59170096fa552a8da';
     // Make HTTP reques with Axios
     axios
       .get(`https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}`)

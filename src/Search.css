@@ -20,4 +20,15 @@ select {
   }
 }
 
+.Outlet1{
+  height: 50px;
+}
 
+
+.ABC{
+  display:flex;
+  flex-direction: row;
+  background-color:#031a2e;
+  width: 70%;
+  color: #ffffff;
+}

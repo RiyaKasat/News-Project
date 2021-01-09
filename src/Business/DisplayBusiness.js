@@ -36,7 +36,7 @@ class DisplayBusiness extends Component {
   }
 
   getArticles(url) {
-    const apiKey = '517e1eb7074b4b0f9543864552059bea';
+    const apiKey = '64fdfad349014eebafb3956d3f31c743';
     // Make HTTP reques with Axios
     axios.get(`http://newsapi.org/v2/top-headlines?source=${url}&category=business&apiKey=${apiKey}`)
       .then(res => {

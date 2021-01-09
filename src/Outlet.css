@@ -1,5 +1,5 @@
 .outletSection {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 1rem;
     padding: 10px;
@@ -19,11 +19,12 @@
 }
 
 .flagCode {
-    width: 32px;
-    height: 20px;
+    width: 100px;
+    height: 60px;
 }
 
 .ABC{
     display:flex;
     flex-direction: row;
+    justify-content: center;
 }

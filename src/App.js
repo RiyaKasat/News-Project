@@ -13,7 +13,8 @@ import Contact from './Contact.js';
 import Error from './Error.js';
 import {Switch,Route} from 'react-router-dom';
 import Contact_Us from './Contact Us';
-
+// import logo1 from './images/DailyNews2..jpg';
+import logo1 from './images/ab.jpg';
 import  {Link} from 'react-router-dom';
 
  import { DropdownSubmenu, NavDropdownMenu} from "react-bootstrap-submenu";
@@ -23,6 +24,8 @@ import  {Link} from 'react-router-dom';
  import FigureImage from 'react-bootstrap/FigureImage';
 import FooterM from './FooterM';
 import SignUpLogin from './SignUpLogin.js';
+import Alan from './VoiceComponent/Alan';
+import Voice from './Voice';
 //import Carousel from 'react-bootstrap/Carousel'
 
 
@@ -33,19 +36,21 @@ function App() {
 return (
   <>
     <div className="container-fluid ">
-      <div className=" ABC1">
-      <nav className="navbar navbar-light bg-light">
-        <a href="#" className="navbar-brand" >
-          <img src={logo} alt="News logo" width="80" height="80"/>
-            <span>News Wave</span>
-        </a>
+      <div className=" ABC2">
+      <div className="   SL"><SignUpLogin/></div>
+      <nav className="navbar ABC1">
+      <div className="navbar-brand LOGO" >
+    <img src={logo1} alt="News logo" width="80" height="60"/>
+    <span class="  mt-4 font-weight-bold  text-warning">  THE NEWS WAVE</span>
+   
+        {/* <marquee className="marq  items_B" ><strong>BREAKING NEWS:US passes 20 million novel coronavirus cases    
+        PM Modi to lay foundation stone of permanent campus of IIM-Sambalpur today</strong></marquee>
+         */}
+    </div>
 
         
-        <SignUpLogin/>
-        <div className="marq">
-        <marquee><strong>BREAKING NEWS:US passes 20 million novel coronavirus cases    
-        PM Modi to lay foundation stone of permanent campus of IIM-Sambalpur today</strong></marquee>
-        </div>
+        
+        
 
         {/* <div class="d-flex justify-content-center">
       <div class="text-center">
@@ -153,7 +158,7 @@ return (
       {/* NAVIGATION    */}
 
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav className="navbar navbar-expand-lg items_A mx-auto A_NAV sticky-top " >
           
         {/* Creating button so that when reduce screen size there will be button in which all menu are will be there */}
     {/* 
@@ -161,8 +166,8 @@ return (
   data-toggler is used to hide section 
   data-target is used as id and same hide should be there in elemnt to hide items */}
 
-            <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#menu">
-              <span className="navbar-toggler-icon"></span>
+            <button type="button" className="navbar-toggler items_A" data-toggle="collapse" data-target="#menu">
+              <span className="navbar-toggler-icon items_A"></span>
             </button>
 
 
@@ -172,20 +177,20 @@ return (
 
 
             <div className="collapse navbar-collapse" id="menu">
-            <ul className="nav navbar-nav mr-auto">
+            <ul className="nav navbar-nav mr-auto items_A">
 
 
               {/* drop down with submenu */}
              
                <li className="nav-item dropdown">
 
-                <a href="https://www.google.com/"  className="nav-link dropdown-toggle ml-3" data-toggle="dropdown">
+                <a href="https://www.google.com/"  className="nav-link dropdown-toggle ml-3  items_A" data-toggle="dropdown">
                   Explore
                 </a>
 
                 <ul className="dropdown-menu">
-                  <li><a href="https://www.google.com/" className="dropdown-item">INDIA</a></li>
-                  <li><a href="https://www.google.com/" className="dropdown-item">WORLD</a></li>
+                  <li><a href="https://www.google.com/" className="dropdown-item  items_A">INDIA</a></li>
+                  <li><a href="https://www.google.com/" className="dropdown-item  items_A">WORLD</a></li>
                   {/* <li><a href="https://www.google.com/" className="dropdown-item">Health</a></li>
                   
                   <li className="dropdown-submenu">
@@ -208,14 +213,16 @@ return (
 
 
 
-               <li className="nav-item"><Link to="/" className="nav-link active">Home</Link> </li>
-              <li className="nav-item"><Link to="/business" className="nav-link">Business</Link> </li>
-              <li className="nav-item"><Link to="/sports" className="nav-link">Sports</Link> </li>
-              <li className="nav-item"><Link to="/entertainment" className="nav-link">Entertainment</Link> </li>
-              <li className="nav-item"><Link to="/science" className="nav-link">Science</Link> </li>
-              <li className="nav-item"><Link to="/health" className="nav-link">Health</Link> </li>
-              {/* <li className="nav-item"><Link to="/registration" className="nav-link">Registration</Link> </li> */}
-              <li className="nav-item"><Link to="/Contact Us" className="nav-link">Contact Us</Link> </li>
+               <li className="nav-item"><Link to="/" className="nav-link active items_A">Home</Link> </li>
+              <li className="nav-item"><Link to="/business" className="nav-link items_A">Business</Link> </li>
+              <li className="nav-item"><Link to="/sports" className="nav-link items_A">Sports</Link> </li>
+              
+            <li className="nav-item"><Link to="/entertainment" className="nav-link items_A">Entertainment</Link> </li> 
+              <li className="nav-item"><Link to="/science" className="nav-link items_A">Science</Link> </li> 
+              <li className="nav-item"><Link to="/health" className="nav-link items_A">Health</Link> </li>
+               {/* <li className="nav-item"><Link to="/registration" className="nav-link">Registration</Link> </li>  */}
+               <li className="nav-item"><Link to="/Contact Us" className="nav-link items_A">Contact Us</Link> </li> 
+               <li className="nav-item"><Link to="/voice" className="nav-link items_A">Voice Assistant</Link> </li> 
        
             </ul>
 
@@ -233,9 +240,9 @@ return (
             <form class="navbar-form  d-none d-lg-block  " role="search" >
             <div class="input-group" >
         
-              <input className="form-control mr-sm-2 ml-5" type="search" placeholder="Search news"></input>
+              <input className="form-control " type="search" placeholder="Search news"></input>
               <div class="input-group-btn">
-              <button className="btn btn-outline-primary my-2 my-sm-0 "  type="submit">Search</button>
+              <button className="btn btn-outline-primary "  type="submit">Search</button>
               </div>
       </div>
         </form>  
@@ -267,10 +274,10 @@ Content Part */}
       <Route exact path='/sports' component={Sports}/>
       <Route exact path='/entertainment' component={Entertainment}/>
       <Route exact path='/Science' component={Science}/>
-      <Route exact path='/health' component={Health}/>
-      
+      <Route exact path='/health' component={Health}/> 
       <Route exact path="/Contact Us" component={Contact_Us} />
-      <Route component={Error}/>
+       <Route exact path="/Voice" component={Voice} /> 
+      {/* <Route component={Error}/> */}
     </Switch>
 
     <FooterM/>

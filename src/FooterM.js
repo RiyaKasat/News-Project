@@ -5,7 +5,7 @@ export class FooterM extends Component {
         return (
             
             <div>
-                <footer class=" text-center text-lg-start bg-dark text-white pt-1 pb-1">
+                <footer class=" text-center text-lg-start FC text-white pt-1 pb-1">
   
   <div class="container p-1 text-center text-md-left">
    
