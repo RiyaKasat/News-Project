@@ -9,10 +9,10 @@ import Entertainment from './Entertainment.js';
 import Science from './Science.js';
 import Health from './Health.js';
 
-import Contact from './Contact.js';
+
 import Error from './Error.js';
 import {Switch,Route} from 'react-router-dom';
-import Contact_Us from './Contact Us';
+import Contact_Us from './Contact_Us';
 // import logo1 from './images/DailyNews2..jpg';
 import logo1 from './images/ab.jpg';
 import  {Link} from 'react-router-dom';
@@ -221,7 +221,7 @@ return (
               <li className="nav-item"><Link to="/science" className="nav-link items_A">Science</Link> </li> 
               <li className="nav-item"><Link to="/health" className="nav-link items_A">Health</Link> </li>
                {/* <li className="nav-item"><Link to="/registration" className="nav-link">Registration</Link> </li>  */}
-               <li className="nav-item"><Link to="/Contact Us" className="nav-link items_A">Contact Us</Link> </li> 
+               <li className="nav-item"><Link to="/Contact_Us" className="nav-link items_A">Contact Us</Link> </li> 
                <li className="nav-item"><Link to="/voice" className="nav-link items_A">Voice Assistant</Link> </li> 
        
             </ul>
@@ -275,9 +275,9 @@ Content Part */}
       <Route exact path='/entertainment' component={Entertainment}/>
       <Route exact path='/Science' component={Science}/>
       <Route exact path='/health' component={Health}/> 
-      <Route exact path="/Contact Us" component={Contact_Us} />
+      <Route exact path="/Contact_Us" component={Contact_Us} />
        <Route exact path="/Voice" component={Voice} /> 
-      {/* <Route component={Error}/> */}
+      <Route component={Error}/>
     </Switch>
 
     <FooterM/>

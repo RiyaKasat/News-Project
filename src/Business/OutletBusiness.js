@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../Outlet.css';
+import '../Search.css';
 
 import { findFlag } from '../helpers';
 
@@ -37,13 +39,7 @@ class OutletBusiness extends Component {
 
   render() {
     return (
-      <div className="outletSection">
-        <h4>
-          Outlet Description{' '}
-          <span role="img" aria-label="Newspaper Emoji">
-            📰
-          </span>
-        </h4>
+      <div className="outletSection mx-auto">
 
         {this.state.data.map((item, y) => {
           if (item.id === this.state.value) {

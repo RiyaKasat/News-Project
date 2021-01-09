@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import '../Outlet.css';
 import DisplayBusiness from './DisplayBusiness.js';
 import OutletBusiness from './OutletBusiness.js';
 
@@ -42,7 +43,7 @@ class Business1 extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className=" ABC mx-auto">
         <h4>Select from {this.state.count} News Outlets</h4>
         <select value={this.state.value} onChange={this.handleChange}>
           
