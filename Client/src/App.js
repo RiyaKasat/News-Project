@@ -86,8 +86,9 @@ return (
 
     <div>
     
-    <button type="button" class="btn btn-warning btn-rounded btn-sm" style={{fontFamily:"Georgia", color:"black"}}>
-          <Link to="/subscribe" >Subscribe </Link></button>
+    <button type="button" class="btn btn-warning btn-rounded btn-sm " style={{fontFamily:"Georgia", color:"black" }}>
+          <Link to="/subscribe" >
+    <i class="far fa-newspaper fa-lg"></i> &nbsp; <span class="items_A"> Subscribe </span> </Link></button>
           </div>
 
         
@@ -190,7 +191,7 @@ return (
 
        
        <marquee className="marq  items_B" ><strong>BREAKING NEWS:US passes 20 million novel coronavirus cases    
-        PM Modi to lay foundation stone of permanent campus of IIM-Sambalpur today</strong></marquee>
+        PM Modi to lay foundation stone of permanent campus of IIM-Sambalpur today. </strong></marquee>
       
       </nav>
      
@@ -213,8 +214,8 @@ return (
   data-toggler is used to hide section 
   data-target is used as id and same hide should be there in elemnt to hide items */}
 
-            <button type="button" className="navbar-toggler items_A" data-toggle="collapse" data-target="#menu">
-              <span className="navbar-toggler-icon items_A"></span>
+            <button type="button" className="navbar-toggler navbar-dark bg bg-light" data-toggle="collapse" data-target="#menu">
+              <span className="navbar-toggler-icon  navbar-dark"></span>
             </button>
 
 
@@ -229,7 +230,7 @@ return (
 
               {/* drop down with submenu */}
              
-               <li className="nav-item dropdown">
+               {/* <li className="nav-item dropdown">
 
                 <a href="https://www.google.com/"  className="nav-link dropdown-toggle ml-3  items_A" data-toggle="dropdown">
                   Explore
@@ -237,7 +238,7 @@ return (
 
                 <ul className="dropdown-menu">
                   <li><a href="https://www.google.com/" className="dropdown-item  items_A">INDIA</a></li>
-                  <li><a href="https://www.google.com/" className="dropdown-item  items_A">WORLD</a></li>
+                  <li><a href="https://www.google.com/" className="dropdown-item  items_A">WORLD</a></li> */}
                   {/* <li><a href="https://www.google.com/" className="dropdown-item">Health</a></li>
                   
                   <li className="dropdown-submenu">
@@ -252,24 +253,25 @@ return (
             </ul>
           </li>
                   </li>  */}
-                </ul>
+                {/* </ul>
 
-               </li> 
-
-
+               </li>  */}
 
 
 
-               <li className="nav-item"><Link to="/" className="nav-link active items_A">Home</Link> </li>
-              <li className="nav-item"><Link to="/business" className="nav-link items_A">Business</Link> </li>
-              <li className="nav-item"><Link to="/sports" className="nav-link items_A">Sports</Link> </li>
+
+
+               <li className="nav-item"><Link to="/" className="nav-link active items_A">
+    <i class="fas fa-home"></i> Home</Link> </li>
+              <li className="nav-item"><Link to="/business" className="nav-link items_A"><i class="fa fa-building" aria-hidden="true"></i> Business</Link> </li>
+              <li className="nav-item"><Link to="/sports" className="nav-link items_A"><i class="fas fa-running"></i> Sports</Link> </li>
               
-              <li className="nav-item"><Link to="/entertainment" className="nav-link items_A">Entertainment</Link> </li> 
-              <li className="nav-item"><Link to="/science" className="nav-link items_A">Science</Link> </li> 
-              <li className="nav-item"><Link to="/health" className="nav-link items_A">Health</Link> </li>
+              <li className="nav-item"><Link to="/entertainment" className="nav-link items_A"><i class="fa fa-television" aria-hidden="true"></i> Entertainment</Link> </li> 
+              <li className="nav-item"><Link to="/science" className="nav-link items_A"><i class="fas fa-brain"></i> Science</Link> </li> 
+              <li className="nav-item"><Link to="/health" className="nav-link items_A"><i class="fa fa-medkit" aria-hidden="true"></i> Health</Link> </li>
                {/* <li className="nav-item"><Link to="/registration" className="nav-link">Registration</Link> </li>  */}
-               <li className="nav-item"><Link to="/Contact_Us" className="nav-link items_A">Contact Us</Link> </li> 
-               <li className="nav-item"><Link to="/voice" className="nav-link items_A">Voice Assistant</Link> </li> 
+               <li className="nav-item"><Link to="/Contact_Us" className="nav-link items_A"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Us</Link> </li> 
+               <li className="nav-item"><Link to="/voice" className="nav-link items_A"><i class="fa fa-microphone" aria-hidden="true"></i>  Voice Assistant</Link> </li> 
        
             </ul>
 
@@ -284,8 +286,8 @@ return (
           
         </form> */}
         
-<SearchForm/>
-        {/* <form class="input-group w-auto my-auto d-none d-sm-flex">
+{/* <SearchForm/> */}
+        <form class="input-group w-auto my-auto d-none d-sm-flex">
         <input
           autocomplete="off"
           type="search"
@@ -296,7 +298,7 @@ return (
         <span class="input-group-text border-0 d-none d-lg-flex"
           ><i class="fas fa-search"></i
         ></span>
-      </form> */}
+      </form>
 
 
             </div>  
@@ -316,7 +318,7 @@ Content Part */}
       <Route exact path="/Contact_Us" component={Contact_Us} />
        <Route exact path="/Voice" component={Voice} /> 
        <Route exact path="/subscribe" component={Subscribe}/>
-       <Route exact path="/userInt" component={UserInt}/>
+     
        <Route exact path="/AdminPage" component={AdminPage}/>
        
        {/* <SecureRoute path='/protected' component={Protected} />

@@ -56,7 +56,7 @@ class Display extends Component {
    
     return(
      
-      <div class="card-deck">
+      <div class="card-deck ">
     {this.state.articles.map((news, i) => {
   return(
     <div class="col-md-4 card-deck mb-5 mx-auto">

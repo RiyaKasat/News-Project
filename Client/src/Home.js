@@ -14,12 +14,14 @@ function Home() {
         
 
 
-<div className="app">
+<div className="app ">
 
             <Search default="the-times-of-india" />   
           {/* // <MainLayout/> */}
            
           {/* <Subs1/>  */}
+
+          
           </div>
 
 
