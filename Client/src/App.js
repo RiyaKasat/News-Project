@@ -13,7 +13,7 @@ import {Switch,Route} from 'react-router-dom';
 import Contact_Us from './Contact_Us';
 // import logo1 from './images/DailyNews2..jpg';
 import logo1 from './images/ab.jpg';
-import  {Link} from 'react-router-dom';
+
 import Subscribe from './Subscribe';
 
  import { DropdownSubmenu, NavDropdownMenu} from "react-bootstrap-submenu";
@@ -30,6 +30,14 @@ import SearchForm from './SearchForm';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import * as ReactBootstrap from 'react-bootstrap';
+import AppWithRouterAccess from './AppWithRouterAccess';
+import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { useOktaAuth } from '@okta/okta-react';
+import Protected from './Protected';
+import AdminLogin from './AdminLogin';
+import AdminPage from './AdminPage';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 function App() {
@@ -48,6 +56,18 @@ function App() {
     
   }, []);
   
+  // const history = useHistory();
+  // const { oktaAuth, authState } = useOktaAuth();
+
+  // if (authState.isPending) return null;
+
+  // const login = async () => history.push('/login');
+  
+  // const logout = async () => oktaAuth.signOut();
+
+  // const button = authState.isAuthenticated ? 
+  //   <button onClick={logout}>Logout</button> :
+  //   <button onClick={login}>Login</button>;
 
 return (
   <>
@@ -55,6 +75,9 @@ return (
     {loading ? "" :(<div class="loading"><ReactBootstrap.Spinner animation="border"/></div>)}
       <div className=" ABC2">
       <div className="   SL"><SignUpLogin/></div>
+      
+     
+
       <nav className="navbar ABC1">
       <div className="navbar-brand LOGO" >
     <img src={logo1} alt="News logo" width="80" height="60"/>
@@ -62,6 +85,7 @@ return (
     </div>
 
     <div>
+    
     <button type="button" class="btn btn-warning btn-rounded btn-sm" style={{fontFamily:"Georgia", color:"black"}}>
           <Link to="/subscribe" >Subscribe </Link></button>
           </div>
@@ -169,6 +193,7 @@ return (
         PM Modi to lay foundation stone of permanent campus of IIM-Sambalpur today</strong></marquee>
       
       </nav>
+     
       
       
         </div> 
@@ -239,7 +264,7 @@ return (
               <li className="nav-item"><Link to="/business" className="nav-link items_A">Business</Link> </li>
               <li className="nav-item"><Link to="/sports" className="nav-link items_A">Sports</Link> </li>
               
-            <li className="nav-item"><Link to="/entertainment" className="nav-link items_A">Entertainment</Link> </li> 
+              <li className="nav-item"><Link to="/entertainment" className="nav-link items_A">Entertainment</Link> </li> 
               <li className="nav-item"><Link to="/science" className="nav-link items_A">Science</Link> </li> 
               <li className="nav-item"><Link to="/health" className="nav-link items_A">Health</Link> </li>
                {/* <li className="nav-item"><Link to="/registration" className="nav-link">Registration</Link> </li>  */}
@@ -292,12 +317,18 @@ Content Part */}
        <Route exact path="/Voice" component={Voice} /> 
        <Route exact path="/subscribe" component={Subscribe}/>
        <Route exact path="/userInt" component={UserInt}/>
+       <Route exact path="/AdminPage" component={AdminPage}/>
+       
+       {/* <SecureRoute path='/protected' component={Protected} />
+        <Route path='/login' render={() => <AdminLogin config={oktaSignInConfig} />} />
+        <Route path='/login/callback' component={LoginCallback} /> */}
       <Route component={Error}/>
       
     </Switch>
-
+    
    
     <FooterM/>
+   
     
     <br/><br/>
 

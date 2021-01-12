@@ -3,6 +3,8 @@ import axios from 'axios';
 import swal from 'sweetalert';
 import SweetAlert from 'sweetalert2-react';
 
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppWithRouterAccess from './AppWithRouterAccess';
 
 
 function LoginButton(props) {
@@ -53,7 +55,10 @@ export function SignUpLogin() {
           onClick={this.changeState} data-toggle="modal" data-target="#login"><i class="fas fa-sign-in-alt ml-3"></i></button>  */}
           {/* {button} */}
        </div>
-
+      
+     
+       
+    
         {/* Sign up */}
         <div class="modal fade" id="signup">
           <div class="modal-dialog">
@@ -91,6 +96,7 @@ export function SignUpLogin() {
               </div>
             </div>
 
+            
       {/*Logout */}
       <div class="modal fade" id="logout">
       <div class="modal-dialog">
@@ -147,7 +153,7 @@ export function SignUpLogin() {
     </div> 
   </div>
   
-          
+  
         </div>
             
         )
