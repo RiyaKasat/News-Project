@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import axios from 'axios';
 import swal from 'sweetalert';
 import SweetAlert from 'sweetalert2-react';
@@ -22,79 +22,25 @@ function LogoutButton(props) {
     </button>
   );
 }
-export class SignUpLogin extends Component {
-    constructor(props){
-        super(props);
-        this.state={
-         name:"",
-         email:"",
-         password:"",
-         
-        }
-        this.handleLoginClick = this.handleLoginClick.bind(this);
-        this.handleLogoutClick = this.handleLogoutClick.bind(this);
-         this.state = {isLoggedIn: false};
-        this.validateForm= this.validateForm.bind(this);
-        this.onChangeInput=this.onChangeInput.bind(this);
+export function SignUpLogin() {
+ 
+      const [fullName, setfullName]= useState('');
+      const [email, setemail]= useState('');
+      const [password, setpassword]= useState('');
+
+      const addData=()=>{
+        axios.post('http://localhost:1337/signupinsert', {fullName: fullName, email:email,password:password});
+        
       }
 
-      handleLoginClick() {
-        this.setState({isLoggedIn: true});
-      }
-    
-      handleLogoutClick() {
-        this.setState({isLoggedIn: false});
-      }
-    
-      validateForm(){
-        const name=  this.state.name;
-        const email=this.state.email;
-        const password=this.state.password;
-        console.log("----validating form");
 
-        //constructing formdata
-        var signupform={
-            name : name,
-            email:email,
-            password:password
-        }
-
-        //post to server
-        axios.post('http://localhost/3003/newssignup', signupform)
-          .then(function (response) {
-            console.log(response);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-      }
-
-      onChangeInput(event)
-      {
-        console.log('----onchange');
-        const name= event.target.name;
-        const value=event.target.value;
-        this.setState({[name]:value});
-
-        const email= event.target.email;
-        const value1=event.target.value;
-        this.setState({[email]:value1});
-
-        const password= event.target.password;
-        const value2=event.target.value;
-        this.setState({[password]:value2});
-      }
-
-      
-
-    render() {
-      const isLoggedIn = this.state.isLoggedIn;
-      let button;
-      if (isLoggedIn) {
-        button = <LogoutButton onClick={this.handleLogoutClick} />;
-      } else {
-        button = <LoginButton onClick={this.handleLoginClick} />;
-      }
+      // const isLoggedIn = this.state.isLoggedIn;
+      // let button;
+      // if (isLoggedIn) {
+      //   button = <LogoutButton onClick={this.handleLogoutClick} />;
+      // } else {
+      //   button = <LoginButton onClick={this.handleLoginClick} />;
+      // }
      
         return (
            
@@ -105,7 +51,7 @@ export class SignUpLogin extends Component {
        <div class="text-center">
        {/* <button type="button" className="btn btn-sm btn-warning float-right" 
           onClick={this.changeState} data-toggle="modal" data-target="#login"><i class="fas fa-sign-in-alt ml-3"></i></button>  */}
-          {button}
+          {/* {button} */}
        </div>
 
         {/* Sign up */}
@@ -120,26 +66,26 @@ export class SignUpLogin extends Component {
 
                 <div class="md-form mb-5 ">
                 <i class="fas fa-user prefix grey-text"></i>
-                <input type="text" class="form-control validate" value={this.state.name} name="name" required onChange={(e)=>this.onChangeInput(e)} />
+                <input type="text" class="form-control validate"  name="name" required  onChange={(e)=>{setfullName(e.target.value)}} />
                 <label data-error="wrong" data-success="right">Enter Your Name</label>
                 </div>
 
                 <div class="md-form mb-5 needs-validation">
                 <i class="fa fa-envelope prefix grey-text"></i>
-                <input type="email" class="form-control validate" value={this.state.email} name="email" required onChange={(e)=>this.onChangeInput(e)}></input>
+                <input type="email" class="form-control validate"  name="email" required onChange={(e)=>{setemail(e.target.value)}}></input>
                 <label data-error="wrong" data-success="right">Enter Your Email Id</label>
                 </div>
 
                 <div class="md-form mb-5 needs-validation">
                 <i class="fas fa-lock prefix grey-text"></i>
-                <input type="password" class="form-control validate" value={this.state.password} name="password" onChange={(e)=>this.onChangeInput(e)}/>
+                <input type="password" class="form-control validate"  name="password" onChange={(e)=>{setpassword(e.target.value)}}/>
                 <label data-error="wrong" data-success="right" required>Enter Your Password</label>
                 </div>
 
               </div>
 
                 <div class="modal-footer d-flex justify-content-center">
-                  <button class="btn btn-primary" onClick={this.validateForm}>Sign Up</button>
+                  <button class="btn btn-primary" onClick={addData}>Sign Up</button>
                 </div>
                 </div>
               </div>
@@ -205,7 +151,7 @@ export class SignUpLogin extends Component {
         </div>
             
         )
-    }
+    
 }
 
 export default SignUpLogin

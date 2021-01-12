@@ -22,15 +22,13 @@ import Subscribe from './Subscribe';
   import Figure from 'react-bootstrap/Figure' ;
  import FigureImage from 'react-bootstrap/FigureImage';
 import FooterM from './FooterM';
+import UserInt from './UserInt';
 import SignUpLogin from './SignUpLogin.js';
 import Alan from './VoiceComponent/Alan';
 import Voice from './Voice';
 import SearchForm from './SearchForm';
-//import Carousel from 'react-bootstrap/Carousel'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-//import Carousel from 'react-bootstrap/Carousel'
-// import Gg from './Gg'
 import * as ReactBootstrap from 'react-bootstrap';
 
 
@@ -173,7 +171,9 @@ return (
       </nav>
       
       
-        </div>   
+        </div> 
+
+          
 
 
 
@@ -291,10 +291,12 @@ Content Part */}
       <Route exact path="/Contact_Us" component={Contact_Us} />
        <Route exact path="/Voice" component={Voice} /> 
        <Route exact path="/subscribe" component={Subscribe}/>
+       <Route exact path="/userInt" component={UserInt}/>
       <Route component={Error}/>
       
     </Switch>
 
+   
     <FooterM/>
     
     <br/><br/>

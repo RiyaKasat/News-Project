@@ -8,6 +8,11 @@ const bodyParser=require('body-parser');
 const nodemailer=require('nodemailer');
 const SMTPTransport = require('nodemailer/lib/smtp-transport');
 const app = express();
+const mongoose = require ('mongoose');
+
+const signupmodel = require('./models/signup')
+
+
 
 app.use(cors());
 
@@ -239,6 +244,62 @@ transporter.sendMail(mailOptions, function(error, info){
 SMTPTransport.close();
 
 })
+
+
+app.use(express.json())
+
+mongoose.connect('mongodb://localhost:27017/signupdb',function (err,res) {
+  if (err) throw err;  
+  console.log('connected to mongo');
+  useNewUrlParser:true
+})
+
+app.post('/signupinsert',async (req,res)=> {
+  const fullName= req.body.fullName;
+  const email = req.body.email;
+  const password = req.body.password;
+   const Users = new signupmodel({fullName:fullName,email:email,password:password})
+  try{
+    await Users.save();
+    res.send("inserted data to Users");
+  }catch(error){
+    console.log(error);
+  }
+})
+
+app.get('/signupread', async (req,res)=>{
+  signupmodel.find({}, (err,result)=>{
+    if (err) throw err;
+    console.log(err);
+    res.send(result);
+  })
+})
+
+app.put('/signupemail/:id', async (req,res)=>{
+  const newEmail=req.body.newEmail;
+  const id = req.body.id;
+  try{
+    await signupmodel.findById(id,req.body,(err,changeEmail)=>{
+      if(err) throw err;
+      changeEmail.email=newEmail;
+      changeEmail.save();
+      res.send("update");
+    });
+   
+  }catch(err){
+    console.log(err);
+  }
+  })
+
+  app.delete('/signupdelete/:id', async (req, res) => {
+    const id= req.params.id;
+    await signupmodel.findByIdAndRemove(id).exec()
+    res.send("deleted");
+      
+  });
+
+  
+
 
 app.listen(1337,()=>{
     console.log("listening 1337")
