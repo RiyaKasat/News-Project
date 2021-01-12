@@ -55,71 +55,6 @@ margin-left: 50px;
   }
 }
 
-.imgbox
-{
- /* margin-top:20px ;*/
-  background-image: url('F:\LNT_Training\MERN Stack\ReactJS\web_portalFinal\Client\src\images\img1.jpg');
-
-  width:100%;
-  background-size: cover;
-  
-}
-
-.imgbox1
-{
- 
-  background-image: url('F:\LNT_Training\MERN Stack\ReactJS\web_portalFinal\Client\src\images\img2.jpg');
-
-  width:100%;
-  background-size: cover;
-  
-} 
-.imgbox2
-{
- 
-  background-image: url('F:\LNT_Training\MERN Stack\ReactJS\web_portalFinal\Client\src\images\img3.jpg');
-
-  width:100%;
-  background-size: cover;
-  
-} 
-.imgbox3
-{
- 
-  background-image: url('F:\LNT_Training\MERN Stack\ReactJS\web_portalFinal\Client\src\images\img4.jpg');
-
-  width:100%;
-  background-size: cover;
-  
-} 
-.imgbox4
-{
- 
-  background-image: url('F:\LNT_Training\MERN Stack\ReactJS\web_portalFinal\Client\src\images\img5.jpg');
-
-  width:100%;
-  background-size: cover;
-  
-} 
-.imgbox5
-{
- 
-  background-image: url('F:\LNT_Training\MERN Stack\ReactJS\web_portalFinal\Client\src\images\img6.jpg');
-
-  width:100%;
-  background-size: cover;
-
-  
-} 
-.imgbox6
-{
- 
-  background-image: url('F:\LNT_Training\MERN Stack\ReactJS\web_portalFinal\Client\src\images\img7.jpg');
-
-  width:100%;
-  background-size: cover;
-  
-} 
 
 
 /* .card-body
@@ -129,6 +64,8 @@ margin-left: 50px;
   border-radius:5px ;
   
 } */
+
+/*Imp*/
 
 .glyphicon {
   font-size: 30px;

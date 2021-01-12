@@ -86,7 +86,8 @@ export function SignUpLogin() {
                 <div class="modal-footer d-flex justify-content-center">
                   <button class="btn btn-primary" onClick={addData}>Sign Up</button>
                 </div>
-
+                 
+                 
               
                 </div>
               </div>

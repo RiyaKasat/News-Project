@@ -15,7 +15,7 @@ export class FooterM extends Component {
         <h2 class="text-uppercase mb-2 font-weight-bold text-white">NEWS <span class="font-weight-bold text-danger">WAVE</span></h2>
 
         <p>
-        THE DAILY is the premier provider of IT channel media and events. We build go-to-market strategies that drive partner recruitment and enablement while creating customer demand.Our unmatched breadth and depth of global media and event brands combined with 35 years of experience and engagement has helped us build unparalleled audience loyalty and credibility.
+        NEWS WAVE is the premier provider of IT channel media and events. We build go-to-market strategies that drive partner recruitment and enablement while creating customer demand.Our unmatched breadth and depth of global media and event brands combined with 35 years of experience and engagement has helped us build unparalleled audience loyalty and credibility.
         </p>
       </div>
     
@@ -62,24 +62,24 @@ export class FooterM extends Component {
                                 <span class="glyphicon glyphicon-forward icon-size"></span>  <a href="#" class="text-white" >Resources</a>
                                 </p>
 
-                                <p>
+                                {/* <p>
                                 <span class="glyphicon glyphicon-forward icon-size"></span> <a href="#" class="text-white" >Reports</a>
-                                </p>
+                                </p> */}
       </div>
       
 
       <div class="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3">
                                 <h5 class="text-uppercase mb-4 font-weight-bold text-warning">CONTACT</h5>
                                 
-                                <p><span class="glyphicon glyphicon-home icon-size"></span> New York, NY 2333, US
+                                <p><span class="glyphicon glyphicon-home icon-size"></span> LTI , Hinjewadi
                                 </p>
 
                                 <p>
-                                <span class="glyphicon glyphicon-send icon-size"></span> thedaily@gmail.com
+                                <span class="glyphicon glyphicon-send icon-size"></span> newswave@gmail.com
                                 </p>
 
                                 <p>
-                                <span class="glyphicon glyphicon-earphone icon-size"></span> +92 3164873493830
+                                <span class="glyphicon glyphicon-earphone icon-size"></span> +91 3164873493830
                                 </p>
 
                                 <p>
@@ -89,10 +89,10 @@ export class FooterM extends Component {
                                 
     		
             <ul class="social-network social-circle">
-             <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-             <li><a href="https://www.linkedin.com/" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-             <li><a href="https://www.instagram.com/" class="icoInstagram" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-             <li><a href="https://twitter.com/?lang=en" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+             <li><a href="https://www.facebook.com/" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+             <li><a href="https://www.linkedin.com/" class="icoLinkedin" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+             <li><a href="https://www.instagram.com/" class="icoInstagram" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+             <li><a href="https://twitter.com/?lang=en" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
             </ul>				
 	  </p>
 
@@ -109,8 +109,8 @@ export class FooterM extends Component {
 
 
   <div class="text-center p-3" >
-     Copyright © 2020 All rights reserved by : <span class="text-uppercase mb-4 font-weight-bold text-warning"> The Providers</span>
-    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+     Copyright © 2020 All rights reserved by : <span class="text-uppercase mb-4 font-weight-bold text-warning"> The Development Team</span>
+    <a class="text-dark" href="#">MDBootstrap.com</a>
   </div>
  
 </footer>

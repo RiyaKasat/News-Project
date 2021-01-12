@@ -9,6 +9,8 @@ const nodemailer=require('nodemailer');
 const SMTPTransport = require('nodemailer/lib/smtp-transport');
 const app = express();
 const mongoose = require ('mongoose');
+const dotenv=require('dotenv');
+const routesUrls=require('./routes/routs');
 
 const signupmodel = require('./models/signup')
 
@@ -299,7 +301,15 @@ app.put('/signupemail/:id', async (req,res)=>{
   });
 
   
+//Siddhi
+mongoose.connect('mongodb://localhost:27017/mytable', function(err, response){
+    if(err){ console.log('Failed to connect to '); }
+    else{ console.log('Connected to db '); }
+ });
 
+app.use(express.json()) 
+app.use(cors())
+app.use('/app',routesUrls)
 
 app.listen(1337,()=>{
     console.log("listening 1337")
