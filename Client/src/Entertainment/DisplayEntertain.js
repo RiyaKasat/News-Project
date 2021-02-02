@@ -36,9 +36,9 @@ class DisplayEntertain extends Component {
   }
 
   getArticles(url) {
-    const apiKey = '517e1eb7074b4b0f9543864552059bea';
+    const apiKey = 'ef2cedb19ca54e9e9d9d2f81d83ed9f0';
     // Make HTTP reques with Axios
-    axios.get(`https://newsapi.org/v2/top-headlines?sources=${url}&category=entertainment&apiKey=${apiKey}`)
+    axios.get(`https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=${apiKey}`)
       .then(res => {
         const articles = res.data.articles;
         // Set state with result

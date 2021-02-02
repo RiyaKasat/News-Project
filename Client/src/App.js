@@ -9,18 +9,18 @@ import Entertainment from './Entertainment.js';
 import Science from './Science.js';
 import Health from './Health.js';
 import Error from './Error.js';
-import {Switch,Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Contact_Us from './Contact_Us';
 // import logo1 from './images/DailyNews2..jpg';
 import logo1 from './images/ab.jpg';
 
 import Subscribe from './Subscribe';
 
- import { DropdownSubmenu, NavDropdownMenu} from "react-bootstrap-submenu";
+import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
 // // import {NavBar, Nav} from 'react-bootstrap';
- import { Navbar, NavItem, NavDropdown, MenuItem, Nav } from 'react-bootstrap';
-  import Figure from 'react-bootstrap/Figure' ;
- import FigureImage from 'react-bootstrap/FigureImage';
+import { Navbar, NavItem, NavDropdown, MenuItem, Nav } from 'react-bootstrap';
+import Figure from 'react-bootstrap/Figure';
+import FigureImage from 'react-bootstrap/FigureImage';
 import FooterM from './FooterM';
 import UserInt from './UserInt';
 import SignUpLogin from './SignUpLogin.js';
@@ -38,64 +38,64 @@ import Protected from './Protected';
 import AdminLogin from './AdminLogin';
 import AdminPage from './AdminPage';
 import { BrowserRouter as Router } from 'react-router-dom';
-
+import Notification from './Notification';
 
 function App() {
-  const [loading,setLoading] =useState(false);
-  const loadFunction= async ()=>{
-    try{
+  const [loading, setLoading] = useState(false);
+  const loadFunction = async () => {
+    try {
       const data = await axios
       setLoading(true);
-    }catch(e){
+    } catch (e) {
       console.log(e)
     }
   }
 
   useEffect(() => {
     loadFunction();
-    
+
   }, []);
-  
+
   // const history = useHistory();
   // const { oktaAuth, authState } = useOktaAuth();
 
   // if (authState.isPending) return null;
 
   // const login = async () => history.push('/login');
-  
+
   // const logout = async () => oktaAuth.signOut();
 
   // const button = authState.isAuthenticated ? 
   //   <button onClick={logout}>Logout</button> :
   //   <button onClick={login}>Login</button>;
 
-return (
-  <>
-    <div className="container-fluid ">
-    {loading ? "" :(<div class="loading"><ReactBootstrap.Spinner animation="border"/></div>)}
-      <div className=" ABC2">
-      <div className="   SL"><SignUpLogin/></div>
-      
-     
+  return (
+    <>
+      <div className="container-fluid ">
+        {loading ? "" : (<div class="loading"><ReactBootstrap.Spinner animation="border" /></div>)}
+        <div className=" ABC2">
+          <div className="   SL"><SignUpLogin /></div>
 
-      <nav className="navbar ABC1">
-      <div className="navbar-brand LOGO" >
-    <img src={logo1} alt="News logo" width="80" height="60"/>
-    <span class="  mt-4 font-weight-bold  text-warning">  THE NEWS WAVE</span>
-    </div>
 
-    <div>
-    
-    <button type="button" class="btn btn-warning btn-rounded btn-sm " style={{fontFamily:"Georgia", color:"black" }}>
-          <Link to="/subscribe" >
-    <i class="far fa-newspaper fa-lg"></i> &nbsp; <span class="items_A"> Subscribe </span> </Link></button>
-          </div>
+          <nav className="navbar ABC1">
+            <div className="navbar-brand LOGO" >
+              <img src={logo1} alt="News logo" width="80" height="60" />
+              <span class="  mt-4 font-weight-bold  text-warning">  THE NEWS WAVE</span>
+            </div>
 
-        
-        
-        
+            <div>
 
-        {/* <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-warning btn-rounded btn-sm " style={{ fontFamily: "Georgia", color: "black" }}>
+                <Link to="/subscribe" >
+                  <i class="far fa-newspaper fa-lg"></i> &nbsp; <span class="items_A"> Subscribe </span> </Link></button>
+              <Notification></Notification>
+            </div>
+
+
+
+
+
+            {/* <div class="d-flex justify-content-center">
       <div class="text-center">
        <button type="button" className="btn btn-info float-right" data-toggle="modal"data-target="#signup" >SignUp<i class="fas fa-user-plus ml-3"></i></button> 
        </div>
@@ -104,7 +104,7 @@ return (
        </div>
 
         {/* Sign up */}
-        {/*  <div class="modal fade" id="signup">
+            {/*  <div class="modal fade" id="signup">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header text-center">
@@ -142,7 +142,7 @@ return (
 
 
             {/* LOGIN */}
-  {/*<div class="modal fade" id="login">
+            {/*<div class="modal fade" id="login">
   <div class="modal-dialog">
     <div class="modal-content">
       
@@ -180,36 +180,36 @@ return (
   
           
         </div> */}
-        
-      
-      {/* <a href="https://www.facebook.com/" className="nav-item nav-link yt"><i className="fa fa-2x fa-facebook"></i></a>
+
+
+            {/* <a href="https://www.facebook.com/" className="nav-item nav-link yt"><i className="fa fa-2x fa-facebook"></i></a>
 			<a href="https://twitter.com/?lang=en" className="nav-item nav-link yt"><i className="fa fa-2x fa-twitter "></i></a>
 			<a href="https://www.instagram.com/" className="nav-item nav-link yt"><i className="fa fa-2x fa-instagram "></i></a>
 			<a href="https://www.youtube.com/" className="nav-item nav-link yt"><i className="fa fa-2x fa-youtube "></i></a>   */}
-       
-       
 
-       
-       <marquee className="marq  items_B" ><strong>BREAKING NEWS:US passes 20 million novel coronavirus cases    
+
+
+
+            <marquee className="marq  items_B" ><strong>BREAKING NEWS:US passes 20 million novel coronavirus cases
         PM Modi to lay foundation stone of permanent campus of IIM-Sambalpur today. </strong></marquee>
-      
-      </nav>
-     
-      
-      
-        </div> 
 
-          
+          </nav>
 
 
 
-      {/* NAVIGATION    */}
+        </div>
 
-      <div>
-        <nav className="navbar navbar-expand-lg items_A mx-auto A_NAV sticky-top " >
-          
-        {/* Creating button so that when reduce screen size there will be button in which all menu are will be there */}
-    {/* 
+
+
+
+
+        {/* NAVIGATION    */}
+
+        <div>
+          <nav className="navbar navbar-expand-lg items_A mx-auto A_NAV sticky-top " >
+
+            {/* Creating button so that when reduce screen size there will be button in which all menu are will be there */}
+            {/* 
   navbar-toggler is used for collapsing menu items
   data-toggler is used to hide section 
   data-target is used as id and same hide should be there in elemnt to hide items */}
@@ -219,18 +219,18 @@ return (
             </button>
 
 
-            
+
 
 
 
 
             <div className="collapse navbar-collapse" id="menu">
-            <ul className="nav navbar-nav mr-auto items_A">
+              <ul className="nav navbar-nav mr-auto items_A">
 
 
-              {/* drop down with submenu */}
-             
-               {/* <li className="nav-item dropdown">
+                {/* drop down with submenu */}
+
+                {/* <li className="nav-item dropdown">
 
                 <a href="https://www.google.com/"  className="nav-link dropdown-toggle ml-3  items_A" data-toggle="dropdown">
                   Explore
@@ -239,7 +239,7 @@ return (
                 <ul className="dropdown-menu">
                   <li><a href="https://www.google.com/" className="dropdown-item  items_A">INDIA</a></li>
                   <li><a href="https://www.google.com/" className="dropdown-item  items_A">WORLD</a></li> */}
-                  {/* <li><a href="https://www.google.com/" className="dropdown-item">Health</a></li>
+                {/* <li><a href="https://www.google.com/" className="dropdown-item">Health</a></li>
                   
                   <li className="dropdown-submenu">
                     <a href="https://www.google.com/" className="dropdown-toggle" data-toggle="dropdown">
@@ -261,21 +261,21 @@ return (
 
 
 
-               <li className="nav-item"><Link to="/" className="nav-link active items_A">
-    <i class="fas fa-home"></i> Home</Link> </li>
-              <li className="nav-item"><Link to="/business" className="nav-link items_A"><i class="fa fa-building" aria-hidden="true"></i> Business</Link> </li>
-              <li className="nav-item"><Link to="/sports" className="nav-link items_A"><i class="fas fa-running"></i> Sports</Link> </li>
-              
-              <li className="nav-item"><Link to="/entertainment" className="nav-link items_A"><i class="fa fa-television" aria-hidden="true"></i> Entertainment</Link> </li> 
-              <li className="nav-item"><Link to="/science" className="nav-link items_A"><i class="fas fa-brain"></i> Science</Link> </li> 
-              <li className="nav-item"><Link to="/health" className="nav-link items_A"><i class="fa fa-medkit" aria-hidden="true"></i> Health</Link> </li>
-               {/* <li className="nav-item"><Link to="/registration" className="nav-link">Registration</Link> </li>  */}
-               <li className="nav-item"><Link to="/Contact_Us" className="nav-link items_A"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Us</Link> </li> 
-               <li className="nav-item"><Link to="/voice" className="nav-link items_A"><i class="fa fa-microphone" aria-hidden="true"></i>  Voice Assistant</Link> </li> 
-       
-            </ul>
+                <li className="nav-item"><Link to="/" className="nav-link active items_A">
+                  <i class="fas fa-home"></i> Home</Link> </li>
+                <li className="nav-item"><Link to="/business" className="nav-link items_A"><i class="fa fa-building" aria-hidden="true"></i> Business</Link> </li>
+                <li className="nav-item"><Link to="/sports" className="nav-link items_A"><i class="fas fa-running"></i> Sports</Link> </li>
 
-            {/* Searh Bar */}
+                <li className="nav-item"><Link to="/entertainment" className="nav-link items_A"><i class="fa fa-television" aria-hidden="true"></i> Entertainment</Link> </li>
+                <li className="nav-item"><Link to="/science" className="nav-link items_A"><i class="fas fa-brain"></i> Science</Link> </li>
+                <li className="nav-item"><Link to="/health" className="nav-link items_A"><i class="fa fa-medkit" aria-hidden="true"></i> Health</Link> </li>
+                {/* <li className="nav-item"><Link to="/registration" className="nav-link">Registration</Link> </li>  */}
+                <li className="nav-item"><Link to="/Contact_Us" className="nav-link items_A"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Us</Link> </li>
+                <li className="nav-item"><Link to="/voice" className="nav-link items_A"><i class="fa fa-microphone" aria-hidden="true"></i>  Voice Assistant</Link> </li>
+
+              </ul>
+
+              {/* Searh Bar */}
               {/* <form className="form-inline  ml-5 my-2 my-lg-0">
                 <input className="form-control mr-sm-2" type="search" placeholder="Search"></input>
                 <button className="btn btn-outline-primary my-2 my-sm-0 "  type="submit">Search</button>
@@ -285,56 +285,56 @@ return (
                 <button className="btn btn-outline-primary my-2 my-sm-0 "  type="submit">Search</button>
           
         </form> */}
-        
-{/* <SearchForm/> */}
-        <form class="input-group w-auto my-auto d-none d-sm-flex">
-        <input
-          autocomplete="off"
-          type="search"
-          class="form-control rounded"
-          placeholder="Search"
-          style={{minWidth: '50px'}}
-        />
-        <span class="input-group-text border-0 d-none d-lg-flex"
-          ><i class="fas fa-search"></i
-        ></span>
-      </form>
+
+              {/* <SearchForm/> */}
+              <form class="input-group w-auto my-auto d-none d-sm-flex">
+                <input
+                  autocomplete="off"
+                  type="search"
+                  class="form-control rounded"
+                  placeholder="Search"
+                  style={{ minWidth: '50px' }}
+                />
+                <span class="input-group-text border-0 d-none d-lg-flex"
+                ><i class="fas fa-search"></i
+                ></span>
+              </form>
 
 
-            </div>  
+            </div>
 
-        </nav>
-      </div>
-{/* 
+          </nav>
+        </div>
+        {/* 
 Content Part */}
-      
-    <Switch>
-    <Route exact path='/' component={Home}/>
-      <Route exact path='/business' component={Business}/>
-      <Route exact path='/sports' component={Sports}/>
-      <Route exact path='/entertainment' component={Entertainment}/>
-      <Route exact path='/Science' component={Science}/>
-      <Route exact path='/health' component={Health}/> 
-      <Route exact path="/Contact_Us" component={Contact_Us} />
-       <Route exact path="/Voice" component={Voice} /> 
-       <Route exact path="/subscribe" component={Subscribe}/>
-     
-       <Route exact path="/AdminPage" component={AdminPage}/>
-       
-       {/* <SecureRoute path='/protected' component={Protected} />
+
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route  exact path='/business' component={Business} />
+          <Route exact path='/sports' component={Sports} />
+          <Route exact path='/entertainment' component={Entertainment} />
+          <Route exact path='/Science' component={Science} />
+          <Route exact path='/health' component={Health} />
+          <Route exact path="/Contact_Us" component={Contact_Us} />
+          <Route exact path="/Voice" component={Voice} />
+          <Route exact path="/subscribe" component={Subscribe} />
+
+          <Route exact path="/AdminPage" component={AdminPage} />
+
+          {/* <SecureRoute path='/protected' component={Protected} />
         <Route path='/login' render={() => <AdminLogin config={oktaSignInConfig} />} />
         <Route path='/login/callback' component={LoginCallback} /> */}
-      <Route component={Error}/>
-      
-    </Switch>
-    
-   
-    <FooterM/>
-   
-    
-    <br/><br/>
+          <Route component={Error} />
 
-    </div>
+        </Switch>
+
+
+        <FooterM />
+
+
+        <br /><br />
+
+      </div>
     </>
   );
 }

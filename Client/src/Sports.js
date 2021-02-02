@@ -3,7 +3,7 @@ import Sports1 from './Sports/Sports.js';
 function Sports() {
     return (
         <div>
-            <Sports1 default="bbc-sports"/>
+            <Sports1 default="bleacher-report"/>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import OutletSports from './OutletSports';
 import '../Outlet.css';
 import '../Search.css';
 import '../Display.css';
-const apiKey = '8a52c5367bb942d59170096fa552a8da';
+const apiKey = 'ef2cedb19ca54e9e9d9d2f81d83ed9f0';
 class Sports1 extends Component {
 
   constructor(props) {

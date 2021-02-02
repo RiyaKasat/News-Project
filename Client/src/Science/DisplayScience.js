@@ -36,7 +36,7 @@ class DisplayScience extends Component {
   }
 
   getArticles(url) {
-    const apiKey = '64fdfad349014eebafb3956d3f31c743';
+    const apiKey = 'ef2cedb19ca54e9e9d9d2f81d83ed9f0';
     // Make HTTP reques with Axios
     axios.get(`https://newsapi.org/v2/top-headlines?sources=${url}& category=science &apiKey=${apiKey}`)
       .then(res => {
