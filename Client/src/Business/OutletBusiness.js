@@ -30,8 +30,8 @@ class OutletBusiness extends Component {
 
   getSources() {
     // Make HTTP reques with Axios
-    const apiKey = '8a52c5367bb942d59170096fa552a8da';
-    axios.get(`https://newsapi.org/v2/sources?category=busines&apiKey=${apiKey}`).then(res => {
+    const apiKey = 'ef2cedb19ca54e9e9d9d2f81d83ed9f0';
+    axios.get(`https://newsapi.org/v2/sources?&apiKey=${apiKey}`).then(res => {
       // Set state with result
       this.setState({ data: res.data.sources });
     });

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+//imporrted axios,outlet,display,search,DisplayBusiness,OutletBusiness
 import axios from 'axios';
 import '../Outlet.css';
 import '../Search.css';
@@ -6,8 +7,9 @@ import '../Display.css';
 import DisplayBusiness from './DisplayBusiness.js';
 import OutletBusiness from './OutletBusiness.js';
 
-
-const apiKey = '8a52c5367bb942d59170096fa552a8da';
+//Genertaed the API Key from https://newsapi.org/
+const apiKey = 'ef2cedb19ca54e9e9d9d2f81d83ed9f0';
+//Crated Business Class Component
 class Business1 extends Component {
 
   constructor(props) {
@@ -47,9 +49,9 @@ class Business1 extends Component {
     return (
       <div >
        
-      <div className="  ABC mx-auto">
-              <h4>{this.state.count} News Outlets    </h4>
-              <select class="selectpicker "  data-style="btn-success" value={this.state.value} onChange={this.handleChange}>
+      <div className="ABC mx-auto">
+              <h4>{this.state.count} News Outlets</h4>
+              <select class="selectpicker"  data-style="btn-success" value={this.state.value} onChange={this.handleChange}>
                 
                 {this.state.data.map((outlet, i) => 
                 {

@@ -1,8 +1,5 @@
 import React, { Component, useState } from 'react'
 import axios from 'axios';
-import swal from 'sweetalert';
-
-
 import firebase from './firebase';
 import { BrowserRouter as Router } from 'react-router-dom';
 import AppWithRouterAccess from './AppWithRouterAccess';

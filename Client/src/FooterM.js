@@ -110,7 +110,7 @@ export class FooterM extends Component {
 
   <div class="text-center p-3" >
      Copyright © 2020 All rights reserved by : <span class="text-uppercase mb-4 font-weight-bold text-warning"> The Development Team</span>
-    <a class="text-dark" href="#">MDBootstrap.com</a>
+   
   </div>
  
 </footer>

@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import './Subscribe.css';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
+import swal from 'sweetalert';
+
+
 
 function loadScript(src){
     return new Promise((resolve=>{
@@ -22,6 +27,7 @@ function loadScript(src){
 const __DEV__ = document.domain==='localhost'
 
 export default class Subscribe extends Component {
+   
     state={
         email:'',
         email1:'',
@@ -65,6 +71,8 @@ axios.post('/api/forma',data)
         console.log('mesaage not sent');
     })
 
+swal('E-Mail Sent','Thank you For Subscribing Montly Plan','success') ;  
+
 }
 
 formSubmit1=(e)=>{
@@ -84,6 +92,8 @@ formSubmit1=(e)=>{
             console.log('mesaage not sent');
         })
     
+        swal('E-Mail Sent','Thank you For Subscribing Quaterly Plan','success') ;  
+
     }
 
     
@@ -103,7 +113,9 @@ formSubmit2=(e)=>{
         }).catch(()=>{
             console.log('mesaage not sent');
         })
-    
+
+        swal('E-Mail Sent','Thank you For Subscribing Annual Plan','success') ;  
+
     }
 
 resetForm=()=>{
@@ -125,6 +137,7 @@ resetForm=()=>{
 
 
     render() {
+
         async function displayRazorpay(){
             const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
             if(!res){
@@ -259,10 +272,12 @@ resetForm=()=>{
                             <h4><i class="fa fa-check text-success" aria-hidden="true"></i> News Hub ePaper for a month</h4>
                             <br></br>
                             <br></br>
+                            <LoginButton></LoginButton>
+                            <LogoutButton></LogoutButton>
                             <form onSubmit={this.formSubmit}>
                                Enter The Email <input type="email" value={this.state.email} onChange={this.handleEmail} required placeholder="Enter the Email Id"></input>
-                                <button href="#!" type="submit" class="btn btn-danger  w-50 mx-auto">Proceed To Subscribe</button>
-
+                                <button href="#!" type="submit"  class="btn btn-danger  w-50 mx-auto">Proceed To Subscribe</button>
+                            
                             </form>
                             <a className="App-link" onClick={displayRazorpay} target="_blank" rel="noopener noreferrer" class="btn btn-primary">Plan 1</a>
                             <br></br>
@@ -281,6 +296,8 @@ resetForm=()=>{
                             <h4><i class="fa fa-check text-success" aria-hidden="true"></i> News Hub Paper for 3 months</h4>
                             <h4><i class="fa fa-check text-success" aria-hidden="true"></i> 1 month of ePaper archive</h4>
                             <br></br>
+                            <LoginButton></LoginButton>
+                            <LogoutButton></LogoutButton>
                             <form onSubmit={this.formSubmit1}>
                                Enter The Email <input type="email" value={this.state.email1} onChange={this.handleEmail1} required placeholder="Enter the Email Id"></input>
                                 <button href="#!" type="submit" class="btn btn-danger w-50 mx-auto">Proceed To Subscribe</button>
@@ -301,6 +318,11 @@ resetForm=()=>{
 
                             <h4><i class="fa fa-check text-success" aria-hidden="true"></i> News Hub ePaper for 12 months</h4>
                             <h4><i class="fa fa-check text-success" aria-hidden="true"></i> 12 month of ePaper archive</h4>
+                          <br></br>
+                       
+                            <LoginButton></LoginButton>
+                            <LogoutButton></LogoutButton>
+
                             <form onSubmit={this.formSubmit2}>
                                Enter The Email <input type="email" value={this.state.email2} onChange={this.handleEmail2} required placeholder="Enter the Email Id"></input>
                                 <button href="#!" type="submit" class="btn btn-danger  w-50 mx-auto">Proceed To Subscribe</button>
@@ -312,6 +334,7 @@ resetForm=()=>{
                 </div>
                 <br></br>
                 <br></br>
+                
             </div>
         </div>
 
